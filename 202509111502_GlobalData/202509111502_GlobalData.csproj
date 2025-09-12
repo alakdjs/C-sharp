@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6A585E5-54C8-4685-9FB5-BB99F50B9A64}</ProjectGuid>
+    <ProjectGuid>{153DEBD7-FE0B-4E76-A252-A08119A5882A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_20250910171</RootNamespace>
-    <AssemblyName>_20250910171</AssemblyName>
+    <RootNamespace>_202509111502_GlobalData</RootNamespace>
+    <AssemblyName>202509111502_GlobalData</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
