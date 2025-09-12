@@ -105,6 +105,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509111625_CallByReferenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509111700_inheritance", "..\202509111700_inheritance\202509111700_inheritance.csproj", "{B228FAFB-AC2F-4D80-B9B4-C1C6D3CA36B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509121603_Inheritance_Specialization", "..\202509121603_Inheritance_Specialization\202509121603_Inheritance_Specialization.csproj", "{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,10 @@ Global
 		{B228FAFB-AC2F-4D80-B9B4-C1C6D3CA36B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B228FAFB-AC2F-4D80-B9B4-C1C6D3CA36B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B228FAFB-AC2F-4D80-B9B4-C1C6D3CA36B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

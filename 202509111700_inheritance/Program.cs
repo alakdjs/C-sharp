@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Authentication.ExtendedProtection.Configuration;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace _202509111700_inheritance
 {
@@ -13,7 +15,13 @@ namespace _202509111700_inheritance
     // 동물농장 시뮬레이션
     // 돼지, 소, 닭
 
-    class Pig
+    // 상속의 장점
+    // 1. 코드 재사용성
+    // 2. 유지보수 용이성
+    // 3. 확장성
+    // 4. 다형성의 기반 구조를 제공
+
+    class Stock
     {
         // 속성
         private string _name;   // 이름
@@ -22,7 +30,12 @@ namespace _202509111700_inheritance
         private float _age; // 나이
         private float _healthRate;  // 건강지수
 
-        public Pig(string name, float weight, float height, float age, float healthRate)
+        protected string Name
+        {
+            get { return _name; }
+        }
+
+        public Stock(string name, float weight, float height, float age, float healthRate)
         {
             _name = name;
             _weight = weight;
@@ -74,87 +87,33 @@ namespace _202509111700_inheritance
         {
             Console.WriteLine($"이름: {_name}\n몸무게: {_weight}\n신장: {_height}\n나이: {_age}\n건강지수: {GetHealth()}\n");
         }
+
     }
 
-    class Cow
+    class Pig : Stock 
     {
-        private string _name;
-        private float _weight;
-        private float _height;
-        private float _age;
-        private float _healthRate;
+        public Pig(string name, float weight, float height, float age, float healthRate)
+            : base(name, weight, height, age, healthRate) { }
+    }
 
+    class Cow : Stock
+    {
         public Cow(string name, float weight, float height, float age, float healthRate)
-        {
-            _name = name;
-            _weight = weight;
-            _height = height;
-            _age = age;
-            _healthRate = healthRate;
-        }
-
-        public void Speak()
-        {
-            Console.WriteLine($"{_name}가 음매합니다.");
-        }
-
-        public void Run()
-        {
-            Console.WriteLine($"{_name}가 뜁니다.");
-        }
-
-        public void Eat()
-        {
-            Console.WriteLine($"{_name}가 먹습니다.");
-        }
-
-        string GetHealth()
-        {
-            if (_healthRate >= 90)
-            {
-                return "매우 건강";
-            }
-            else if (70 < _healthRate && _healthRate < 90)
-            {
-                return "건강";
-            }
-            else if (60 < _healthRate && _healthRate <= 70)
-            {
-                return "보통";
-            }
-            else if (40 < _healthRate && _healthRate <= 60)
-            {
-                return "미흡";
-            }
-            else
-            {
-                return "치료 요망";
-            }
-        }
-
-        public void Info()
-        {
-            Console.WriteLine($"이름: {_name}\n몸무게: {_weight}\n신장: {_height}\n나이: {_age}\n건강지수: {GetHealth()}\n");
-        }
+            : base(name, weight, height, age, healthRate) { }
     }
 
-    class Chicken
+    class Chicken : Stock
     {
-        string _name;
-        float _weight;
-        float _height;
-        float _age;
-        float _healthRate;
         bool _isFly;
 
         private void Fly()
         {
-            Console.WriteLine($"{_name}이 납니다.");
+            Console.WriteLine($"{Name}이 납니다.");
         }
 
         private string GetKind()
         {
-            if(_isFly)
+            if (_isFly)
             {
                 return "나는 닭";
             }
@@ -165,21 +124,17 @@ namespace _202509111700_inheritance
         }
 
         public Chicken(string name, float weight, float height, float age, float healthRate, bool isFly)
+            : base(name, weight, height, age, healthRate)
         {
-            _name = name;
-            _weight = weight;
-            _height = height;
-            _age = age;
-            _healthRate = healthRate;
             _isFly = isFly;
         }
 
-        public void Speak()
+        public new void Speak()
         {
-            Console.WriteLine($"{_name}이 꼬끼오합니다.");
+            Console.WriteLine($"{Name}이 꼬끼오 합니다.");
         }
 
-        public void Run()
+        public new void Run()
         {
             if (_isFly)
             {
@@ -187,42 +142,60 @@ namespace _202509111700_inheritance
             }
             else
             {
-                Console.WriteLine($"{_name}이 뜁니다.");
+                base.Run();
             }
         }
 
-        public void Eat()
+        public new void Info() // 메소드 Hiding
         {
-            Console.WriteLine($"{_name}이 먹습니다.");
+            base.Info();
+            Console.WriteLine($"\n종류: {GetKind()}");
         }
 
-        string GetHealth()
+    }
+
+    class Sheep : Stock
+    {
+        private bool _type; // true: 털 양, false: 고기 양
+
+        public Sheep(string name, float weight, float height, float age, float healthRate, bool type)
+            : base(name, weight, height, age, healthRate)
         {
-            if (_healthRate >= 90)
-            {
-                return "매우 건강";
-            }
-            else if (70 < _healthRate && _healthRate < 90)
-            {
-                return "건강";
-            }
-            else if (60 < _healthRate && _healthRate <= 70)
-            {
-                return "보통";
-            }
-            else if (40 < _healthRate && _healthRate <= 60)
-            {
-                return "미흡";
-            }
-            else
-            {
-                return "치료 요망";
-            }
+            _type = type;
         }
 
-        public void Info()
+        public new void Speak()
         {
-            Console.WriteLine($"이름: {_name}\n몸무게: {_weight}\n신장: {_height}\n나이: {_age}\n건강지수: {GetHealth()}\n종류: {GetKind()} ");
+            Console.WriteLine($"{Name}가 음메에에에 합니다.");
+        }
+
+        public new void Info()
+        {
+            base.Info();
+            string type = _type ? "털양" : "고기양";
+            Console.WriteLine($"종류: {type}");
+        }
+    }
+
+    class Fish : Stock
+    {
+        private bool _eat;
+        public Fish(string name, float weight, float height, float age, float healthRate, bool eat)
+            : base(name, weight, height, age, healthRate) 
+        {
+            _eat = eat;
+        }
+
+        public new void Speak()
+        {
+            Console.WriteLine($"{Name}가 뻐끔뻐끔 합니다.");
+        }
+
+        public new void Info()
+        {
+            base.Info();
+            string eat = _eat ? "식용물고기" : "관상물고기";
+            Console.WriteLine($"종류: {eat}");
         }
     }
 
@@ -234,11 +207,19 @@ namespace _202509111700_inheritance
             Cow cow = new Cow("소", 350.0f, 200.0f, 2.3f, 75.0f);
             Chicken flyChicken = new Chicken("나는 닭", 4.3f, 1.2f, 1.5f, 60.0f, true);
             Chicken notFlyChicken = new Chicken("못나는 닭", 3.8f, 1.4f, 1.0f, 40.0f, false);
+            Sheep purSheep = new Sheep("털양", 200.0f, 150.0f, 1.8f, 60.0f, true);
+            Sheep beefSheep = new Sheep("고기양", 180.0f, 140.0f, 2.0f, 40.0f, false);
+            Fish eatFish = new Fish("식용물고기", 10.0f, 30.0f, 1.0f, 50.0f, true);
+            Fish seeFish = new Fish("관상물고기", 50.0f, 120.0f, 1.0f, 80.0f, false);
 
             pig.Speak();
             cow.Speak();
             flyChicken.Speak();
             notFlyChicken.Speak();
+            purSheep.Speak();
+            beefSheep.Speak();
+            eatFish.Speak();
+            seeFish.Speak();
 
             Console.WriteLine();
 
@@ -246,6 +227,10 @@ namespace _202509111700_inheritance
             cow.Run();
             flyChicken.Run();
             notFlyChicken.Run();
+            purSheep.Run();
+            beefSheep.Run();
+            eatFish.Run();
+            seeFish.Run();
 
             Console.WriteLine();
 
@@ -259,6 +244,20 @@ namespace _202509111700_inheritance
             Console.WriteLine();
 
             notFlyChicken.Info();
+            Console.WriteLine();
+
+            purSheep.Info();
+            Console.WriteLine();
+
+            beefSheep.Info();
+            Console.WriteLine();
+
+            eatFish.Info();
+            Console.WriteLine();
+
+            seeFish.Info();
+            Console.WriteLine();
+
         }
     }
 }
