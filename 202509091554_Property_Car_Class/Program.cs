@@ -22,7 +22,7 @@ namespace _202509091554_Property_Car_Class
         public int WheelCount
         { get => wheelCount; }
 
-        public int Speed { set; get; }  // 자동 구현 Property
+        public int Speed { set; get; } = 10;  // 자동 구현 Property
 
         public string IsCargo
         {
