@@ -16,7 +16,7 @@ namespace _202509081721_enCapsulation
     // }
     class Son   // 캡슐화
     {
-        public string address;
+        public string address; // 멤버필드
         public int age;
         public string name;
         public bool sungbyul;

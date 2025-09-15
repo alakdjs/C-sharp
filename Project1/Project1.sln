@@ -107,6 +107,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509111700_inheritance", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509121603_Inheritance_Specialization", "..\202509121603_Inheritance_Specialization\202509121603_Inheritance_Specialization.csproj", "{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509091554_Property_Car_Class", "..\202509091554_Property_Car_Class\202509091554_Property_Car_Class.csproj", "{D78FF91A-8125-4338-8231-61D68EFB5DB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -321,6 +323,10 @@ Global
 		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2803FE12-0AB5-46ED-8AD6-10FCC169E67D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78FF91A-8125-4338-8231-61D68EFB5DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78FF91A-8125-4338-8231-61D68EFB5DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78FF91A-8125-4338-8231-61D68EFB5DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78FF91A-8125-4338-8231-61D68EFB5DB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
