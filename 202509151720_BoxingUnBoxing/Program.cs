@@ -32,6 +32,15 @@ namespace _202509151720_BoxingUnBoxing
             object obj2 = i; // boxing
 
             int j = (int)obj; // UnBoxing
+
+            Console.WriteLine($"obj = {obj}");
+
+            obj = new A(); // C# 모든 객체는 Object 타입에서 상속 받습니다. UpCasting
+
+            ((A)obj)._value = 20; // 다운캐스팅
+
+            A a = (A)obj;
+            a.Print();
         }
     }
 }

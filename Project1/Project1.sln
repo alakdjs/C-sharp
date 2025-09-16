@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509151701_UpCasting", ".
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509151720_BoxingUnBoxing", "..\202509151720_BoxingUnBoxing\202509151720_BoxingUnBoxing.csproj", "{BEC5CC8C-0D33-4552-B084-B21EBF78BBFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509161512_ShallowCopy", "..\202509161512_ShallowCopy\202509161512_ShallowCopy.csproj", "{96586AA1-94A9-470C-A64F-989A8C53D5AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,10 @@ Global
 		{BEC5CC8C-0D33-4552-B084-B21EBF78BBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEC5CC8C-0D33-4552-B084-B21EBF78BBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEC5CC8C-0D33-4552-B084-B21EBF78BBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96586AA1-94A9-470C-A64F-989A8C53D5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96586AA1-94A9-470C-A64F-989A8C53D5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96586AA1-94A9-470C-A64F-989A8C53D5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96586AA1-94A9-470C-A64F-989A8C53D5AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
