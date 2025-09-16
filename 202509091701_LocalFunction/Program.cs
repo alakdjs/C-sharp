@@ -6,93 +6,35 @@ using System.Threading.Tasks;
 
 namespace _202509091701_LocalFunction
 {
-   class Student
+    internal class Program
     {
-        private string _name; // 일반 멤버필드
-        private int _grade;
-        private int _classNum;
-
-        public static int Count = 0;    // 정적 멤버 필드
-
-        public Student(string name, int grade, int classNum) // 인자를 받는 생성자
+        // 로컬함수(Local Function)
+        static string ToLowerString(string input)
         {
-            _name = name;
-            _grade = grade;
-            _classNum = classNum;
+            // 대문자 문자열이 들어오면 문자형 배열로 바꿔준 뒤,
+            // 인덱스 전달받아 만약 대문자라면 +32를 return해서 소문자로 출력
+            var arr = input.ToCharArray();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = ToLowerChar(i);
+            }
 
-            Count++; // 정적멤버필드 Count의 값을 1증가
-        }
+            // 지역함수
+            char ToLowerChar(int i)
+            {
+                if (arr[i] < 65 || arr[i] > 90) // a~z의 ASCII 값 : 65 : 90
+                    return arr[i];
+                else // a~z의 ASCII 값 : 97 : 122
+                    return (char)(arr[i] + 32);
+            }
 
-        ~Student()
-        {
-            Console.WriteLine("Student 소멸자");
-            Count--;
-        }
-
-        void ShowInfo()
-        {
-            Console.WriteLine($"이름: {_name}\n학년: {_grade}\n반: {_classNum}\n\n");
-        }
-    }
-
-    class Program
-    {
-        static Student CreateStudent(string name, int grade, int classNum)
-        {
-            Student st = new Student(name, grade, classNum);
-
-            return st;
-        }
-
-        static void CreateStudent2(string name, int grade, int classNum)
-        {
-            Student st = new Student(name, grade, classNum);
-
-        }
-
-        static void ProcessStudent()
-        {
-            //CreateStudent();
-
-            GC.Collect();   // garbage collector에게 메모리 정리요청
+            return new string(arr);
         }
 
         static void Main(string[] args)
         {
-
-            {
-                //Student st0 = CreateStudent("monster1", 3, 11);
-                CreateStudent2("monster1", 3, 11);
-
-                Console.WriteLine($"학생수는: {Student.Count}");
-
-
-                {
-                    //Student st1 = CreateStudent("monster2", 2, 10);
-                    CreateStudent2("monster2", 2, 10);
-                    Console.WriteLine($"학생수는: {Student.Count}");
-                    {
-
-                        CreateStudent2("monster3", 1, 7);
-                        Console.WriteLine($"학생수는: {Student.Count}");
-
-                    }
-                    GC.Collect();
-                    Console.Read(); // 멈춤                       
-                    Console.WriteLine($"학생수는: {Student.Count}");
-
-                }
-                GC.Collect();
-                Console.Read(); // 멈춤                       
-                Console.WriteLine($"학생수는: {Student.Count}");
-
-            }
-            Student st3 = CreateStudent("monster4", 3, 5);
-            GC.Collect();
-            Console.Read(); // 멈춤                       
-            Console.WriteLine($"학생수는: {Student.Count}");
-
+            Console.WriteLine(ToLowerString("Hello!"));
+            Console.WriteLine(ToLowerString("Good Morning."));
         }
-
     }
 }

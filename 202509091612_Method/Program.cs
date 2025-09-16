@@ -25,8 +25,6 @@ namespace _202509091612_Method
     // 메소드명 메소드를 호출할때 사용할 이름
     // 매개변수(parameter): 메소드를 호출할때 전달할 인자값(argument)을 받는 변수
 
-
-
     class Calculator
     {
         public int add(int a, int b)
@@ -52,8 +50,6 @@ namespace _202509091612_Method
         {
             int a = 20;
             int b = 30;
-
-
 
             Calculator cal = new Calculator();
 
