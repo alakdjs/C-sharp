@@ -21,8 +21,6 @@ namespace Electronics
 
     class Television
     {
-
-
         float _height;  // 높이
         float _width;   // 폭
         float _depth;   // 깊이
@@ -34,7 +32,6 @@ namespace Electronics
         // 추가 정보
         float _resolution;  // 해상도
         Electronics.Rect _screenSize;
-
 
         public Television(
             float height,
@@ -58,7 +55,6 @@ namespace Electronics
             _screenSize = screenSize;
         }
 
-
         public string GetPosition()
         {
             return _positionData;
@@ -73,5 +69,4 @@ namespace Electronics
             Console.WriteLine($"위치정보: {_positionData}");
         }
     }
-
 }

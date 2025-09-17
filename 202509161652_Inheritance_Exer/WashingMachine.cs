@@ -3,7 +3,6 @@
 
 namespace Electronics
 {
-
     class WashingMachine
     {
         public enum WashingType

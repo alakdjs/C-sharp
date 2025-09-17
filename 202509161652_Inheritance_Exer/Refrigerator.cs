@@ -44,7 +44,6 @@ namespace Electronics
             _electricity_usage = electricity_usage;
         }
 
-
         public string GetPosition()
         {
             return _positionData;
