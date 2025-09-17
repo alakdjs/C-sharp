@@ -20,6 +20,11 @@ namespace _202509161512_ShallowCopy
             this.a = a;
             this.b = b;
         }
+
+        public Top Copy()
+        {
+            return (Top)this.MemberwiseClone();
+        }
     }
 
     class Child
@@ -45,15 +50,18 @@ namespace _202509161512_ShallowCopy
 
         public Child DeepCopy()
         {
-            Child child = new Child(this.age, this.height);
-            child.grand = new Top(this.grand.a, this.grand.b);
+            Child child = Copy();
+            //Child child = new Child(this.age, this.height);
+
+            child.grand = this.grand.Copy();
+            //child.grand = new Top(this.grand.a, this.grand.b);
 
             return child;
         }
 
         public Child Copy()
         {
-            return (Child)this.MemberwiseClone();
+            return (Child)this.MemberwiseClone(); // 얕은 복사
 
             /*
             Child ret = new Child(this.age, this.height);
@@ -77,7 +85,8 @@ namespace _202509161512_ShallowCopy
             ret = object.ReferenceEquals(child.grand, child2.grand);
             Console.WriteLine($"child.grand == child2.grand ? ret = {ret}");
 
-            Child child3 = child.Copy();    //Shallow Copy
+
+            Child child3 = child.Copy();    // Shallow Copy
             ret = object.ReferenceEquals(child, child3);
             Console.WriteLine($"child == child3 ? ret = {ret}");
 
