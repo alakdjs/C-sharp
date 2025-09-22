@@ -151,6 +151,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509191450_Composition_Ro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509191515_Polymorphism_CoffeeShop", "..\202509191515_Polymorphism_CoffeeShop\202509191515_Polymorphism_CoffeeShop.csproj", "{AC2FD352-0C22-4A97-B6A0-F3EA0B6AB863}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509221440_VirtualFunction", "..\202509221440_VirtualFunction\202509221440_VirtualFunction.csproj", "{B84477DE-733D-4D75-AE54-BF5145D8E0C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509221549_Polymorphism_MonsterAttack", "..\202509221549_Polymorphism_MonsterAttack\202509221549_Polymorphism_MonsterAttack.csproj", "{6B397A29-FAB0-4D3E-BBBF-551F97648353}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -453,6 +457,14 @@ Global
 		{AC2FD352-0C22-4A97-B6A0-F3EA0B6AB863}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC2FD352-0C22-4A97-B6A0-F3EA0B6AB863}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC2FD352-0C22-4A97-B6A0-F3EA0B6AB863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84477DE-733D-4D75-AE54-BF5145D8E0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84477DE-733D-4D75-AE54-BF5145D8E0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84477DE-733D-4D75-AE54-BF5145D8E0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84477DE-733D-4D75-AE54-BF5145D8E0C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
