@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Monster;
+﻿using Monster;
+using System;
 
-namespace _202509221549_Polymorphism_MonsterAttack
+namespace _202509221529_Polymorphism_MonsterAttack
 {
     internal class Program
     {
@@ -13,10 +9,14 @@ namespace _202509221549_Polymorphism_MonsterAttack
         {
             Dragon dragonA = new Dragon("dragonA", 100, 25, 30);
             Dragon dragonB = new Dragon("dragonB", 100, 29, 27);
-            Goblin goblinA = new Goblin("goblinA", 50, 10, 35, 8);
+
+            Goblin goblinA = new Goblin("goblinA", 50, 10, 15, 8);
             Goblin goblinB = new Goblin("goblinB", 45, 10, 15, 8);
-            Vampire vampireA = new Vampire("vampireA", 20, 10, 30);
-            Vampire vampireB = new Vampire("vampireB", 25, 10, 30);
+
+            Slime slimeA = new Slime("slimeA", 30, 5, 10, 8);
+
+            Zombie zombieA = new Zombie("zombieA", 60, 20, 13);
+
 
             dragonA.Attack(dragonB);
             dragonB.Info();
@@ -27,18 +27,21 @@ namespace _202509221549_Polymorphism_MonsterAttack
             goblinB.Info();
 
             Console.WriteLine();
-            dragonA.Attack(goblinA);
+            dragonA.Attack(goblinB);
+            goblinB.Info();
+
+
+            Console.WriteLine();
+            goblinA.Attack(dragonA);
             goblinA.Info();
 
             Console.WriteLine();
-            goblinA.Attack(dragonB);
-            dragonB.Info();
+            goblinA.Attack(slimeA);
+            slimeA.Info();
 
             Console.WriteLine();
-            vampireA.Attack(dragonB);
-            dragonB.Info();
-            Console.WriteLine();
-            vampireA.Info();
+            goblinA.Attack(zombieA);
+            zombieA.Info();
 
         }
     }

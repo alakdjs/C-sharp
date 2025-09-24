@@ -8,5 +8,10 @@ namespace Monster
     {
         public Dragon(string name, int health, int defense, int attack)
             : base(name, health, defense, attack) { }
+
+        protected override void GetDamage(int attack)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

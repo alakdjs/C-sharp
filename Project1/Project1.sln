@@ -155,6 +155,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509221440_VirtualFunctio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509221549_Polymorphism_MonsterAttack", "..\202509221549_Polymorphism_MonsterAttack\202509221549_Polymorphism_MonsterAttack.csproj", "{6B397A29-FAB0-4D3E-BBBF-551F97648353}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509241500_OperatorOverloading", "..\202509241500_OperatorOverloading\202509241500_OperatorOverloading.csproj", "{953EBC9E-B0C3-412A-A04F-87FB1EE1C284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509241520_Operator_Overloading2", "..\202509241520_Operator_Overloading2\202509241520_Operator_Overloading2.csproj", "{5D97A34E-26EA-48C0-8D9B-BCC555693127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509241537_OperatorOverloading3", "..\202509241537_OperatorOverloading3\202509241537_OperatorOverloading3.csproj", "{F0166590-DD0F-499C-B1C4-1DC431ADB2D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "202509241606_OperatorOverloading_Exer", "..\202509241606_OperatorOverloading_Exer\202509241606_OperatorOverloading_Exer.csproj", "{6FD29C02-E5C9-4172-81FE-9A08F878ED95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -465,6 +473,22 @@ Global
 		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B397A29-FAB0-4D3E-BBBF-551F97648353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{953EBC9E-B0C3-412A-A04F-87FB1EE1C284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{953EBC9E-B0C3-412A-A04F-87FB1EE1C284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{953EBC9E-B0C3-412A-A04F-87FB1EE1C284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{953EBC9E-B0C3-412A-A04F-87FB1EE1C284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D97A34E-26EA-48C0-8D9B-BCC555693127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D97A34E-26EA-48C0-8D9B-BCC555693127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D97A34E-26EA-48C0-8D9B-BCC555693127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D97A34E-26EA-48C0-8D9B-BCC555693127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0166590-DD0F-499C-B1C4-1DC431ADB2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0166590-DD0F-499C-B1C4-1DC431ADB2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0166590-DD0F-499C-B1C4-1DC431ADB2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0166590-DD0F-499C-B1C4-1DC431ADB2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD29C02-E5C9-4172-81FE-9A08F878ED95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD29C02-E5C9-4172-81FE-9A08F878ED95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD29C02-E5C9-4172-81FE-9A08F878ED95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD29C02-E5C9-4172-81FE-9A08F878ED95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

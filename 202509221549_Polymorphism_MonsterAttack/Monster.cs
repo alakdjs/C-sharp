@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Threading.Tasks;
+
 
 namespace Monster
 {
-    internal class Monster
+    internal abstract class Monster // 추상클래스
     {
-        protected string _name;  // 몬스터명
+        protected string _name;   // 몬스터명
         protected int _health;    // 생명력
         protected int _defense;   // 방어력
         protected int _attack;    // 공격력
@@ -26,6 +26,8 @@ namespace Monster
             get => _name;
         }
 
+
+
         public Monster(string name, int health, int defense, int attack)
         {
             _name = name;
@@ -34,19 +36,24 @@ namespace Monster
             _attack = attack;
         }
 
+        protected abstract void GetDamage(int attack); // 추상메소드
+
+
         public void Attack(Monster enemy)
         {
+            Console.WriteLine($"Attack(Monster)");
             int oldHealth = enemy._health;
-            int damage = _attack - enemy._defense;
 
-            if (damage < 0)
-            {
-                damage = 0;
-            }
+            enemy.GetDamage(_attack);
 
-            enemy._health -= damage;
             Console.WriteLine($"{_name}이 {enemy._name}을 공격해서 {enemy._name}의 생명력이 {oldHealth}에서 {enemy._health}로 내려감");
+
         }
+
+        // Goblin, Slime이 있습니다.
+        // Damage 처리하는 방식도 변경하세요..
+
+
 
         public void Info()
         {
